@@ -1,5 +1,6 @@
 import firebase from "firebase/app";
 import "firebase/auth";
+import "firebase/database";
 
 var firebaseConfig = {
     apiKey: "AIzaSyAaoqIQyL3gQY75wvjJIOs0xfDNhTdArDM",
@@ -14,4 +15,4 @@ firebase.initializeApp(firebaseConfig);
 
 const db = firebase.database();
 
-export { firebase, db, messaging };
+export { firebase, db };
