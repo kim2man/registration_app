@@ -1,8 +1,5 @@
 import React from 'react';
-import firebase from 'firebase';
 import Button from 'react-bootstrap/Button';
-import Alert from 'react-bootstrap/Alert';
-import Constants from '../constants';
 
 const Home = ({year}) => {
   return (

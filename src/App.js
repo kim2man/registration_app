@@ -1,19 +1,18 @@
 import React, { useEffect, useState } from 'react';
-import { Router } from "@reach/router";
+import { Routes, Route } from "react-router-dom";
 import './App.css';
-import firebase from "firebase";
+import { myref } from "./myfirebase";
 import { Nav, Navbar, Container } from 'react-bootstrap';
 import Register from './pages/Register';
 import Reregister from './pages/Reregister';
 import Confirmation from './pages/Confirmation';
 import Home from './pages/Home';
 import About from './pages/About';
-import Class from './pages/Class';
 import ClassPage from './pages/ClassPage';
 import Login from './pages/Login';
 
 const App = () => {
-  const firebaseRef = firebase.database().ref(`Year`);
+  const firebaseRef = myref(`Year`);
   const [year, setYear] = useState("");
   useEffect(() => {
     firebaseRef.on("value", snap => {
@@ -40,15 +39,18 @@ const App = () => {
           </Nav>
         </Navbar.Collapse>
       </Navbar>
-      <Router>
-        <Home path="/" year={year}/>
+      <Routes>
+
+{/*
+        <Route path="/" element={<Home year={year}/>} />
+
         <Register path="/register" year={year}/>
         <Confirmation path="confirmation"/>
         <Reregister path="/reregister" year={year}/>
         <About path="/about"/>
-        {/* <Class path="/class"/> */}
         <ClassPage path="/class/*"/>
-      </Router>
+  */}
+      </Routes>
       <Container style={{marginTop: '50px'}}>
         <hr/>
         <footer style={{color: 'gray'}}>
