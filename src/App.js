@@ -43,16 +43,12 @@ const App = () => {
       <Routes>
         
         <Route path="/" element={<Home year={year}/>} />
-        {/*
-
-        <Register path="/register" year={year}/>
-
-        <Confirmation path="confirmation"/>
-        <Reregister path="/reregister" year={year}/>
-        <About path="/about"/>
-        {/*<Class path="/class"/> 
-        <ClassPage path="/class/*"/>
-      */}
+        <Route path="/register" element={<Register year={year}/>} />
+        <Route path="confirmation" element={<Confirmation/>} />
+        <Route path="/reregister" element={<Reregister year={year}/>} />
+        <Route path="/about" element={<About/>} />
+        {/*<Route path="/class" element={<Class/>} />*/}
+        <Route path="/class/*" element={<ClassPage/>} />
       
       </Routes>
       <Container style={{marginTop: '50px'}}>

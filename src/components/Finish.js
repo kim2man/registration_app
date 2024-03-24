@@ -1,5 +1,7 @@
 import React from 'react';
-import { Form, Button, ButtonGroup, Container } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import Form from 'react-bootstrap/Form';
+import Button from 'react-bootstrap/Button';
 import Stein from './Stein';
 import useValidation from '../hooks/useValidation';
 

@@ -1,5 +1,8 @@
 import React from 'react';
-import { Container, Form, Col, Button, ButtonGroup, Row } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
 
 const Student = (props) => {
     const {studentList, setStudents} = props;
@@ -19,7 +22,7 @@ const Student = (props) => {
         backgroundColor:'#F3F3F3',
         marginTop:'10px'}}>
     {/* <Form noValidate validated={validated}> */}
-        <Form.Row>
+        <Row>
             <Form.Group as={Col} controlId="formGridName">
                 <Form.Label>한글 성명 | Korean Name *</Form.Label>
                 <Form.Control required placeholder="Last First Name" 
@@ -42,8 +45,8 @@ const Student = (props) => {
                         handleChange(e.target.value, 'engName');
                     }}/>
             </Form.Group>
-        </Form.Row> 
-        <Form.Row>
+        </Row> 
+        <Row>
             <Form.Group as={Col} controlId="formGridBirth">
                 <Form.Label>Birthdate *</Form.Label>
                 <Form.Control required type="date" 
@@ -80,7 +83,7 @@ const Student = (props) => {
                     <option>N/A</option>
                 </Form.Control>
             </Form.Group>
-        </Form.Row>
+        </Row>
         <Form.Group>
             <Form.Label>성별 | Gender *</Form.Label>
             <Form.Check style={{paddingLeft:"20px"}}
