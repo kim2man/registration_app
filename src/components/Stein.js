@@ -25,7 +25,7 @@ function writeRegistration(registration) {
 
 async function searchDatabase(email) {
     // console.log("em: " + email);
-    return await store.read("Database",     
+    return await store.read(Constants.previousDbYear,     
     {
         authentication: { username: Constants.username, password: Constants.auth },
         search: { email: email }

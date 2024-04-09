@@ -27,6 +27,8 @@ const Step1 = ({steps, registrations}) => {
         }
       };
     const addToRegistration = (obj) => {
+        // Overwrite registration with obj which has subset of key of registration.
+        // https://oprearocks.medium.com/what-do-the-three-dots-mean-in-javascript-bc5749439c9a
         let parentInfo = {...registration, ...obj};
         setRegistration(parentInfo);
     }

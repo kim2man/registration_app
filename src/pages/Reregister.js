@@ -1,9 +1,13 @@
 import React from 'react';
 import useSearch from '../hooks/useSearch';
 import Stein from '../components/Stein';
-import { Form, Container, Button, Col } from 'react-bootstrap';
+import { Container } from 'react-bootstrap';
+import Col from 'react-bootstrap/Col';
+import Form from 'react-bootstrap/Form';
+import Row from 'react-bootstrap/Row';
+import Button from 'react-bootstrap/Button';
 
-const Home = ({year}) => {
+const Reregister = ({year}) => {
     const {email, setEmail, results, setResults} = useSearch();
     const handleSubmit = async event => {
         event.preventDefault();
@@ -22,14 +26,14 @@ const Home = ({year}) => {
   return (
     <Container style={{marginTop:'50px'}}>
     <Form onSubmit={handleSubmit}>
-        <Container>
+     <Container>
           <h2>재등록 | Reregister </h2>
           <h4><div dangerouslySetInnerHTML={{ __html: year }} /></h4>
           <p>1-2학기 재학생만 가능, 신입생은 새로 등록해주세요. <br/>
           Only for returning students, for new students please use the other <a href="/register">form</a>.
           </p>
           <Form.Label><strong>부모 이메일 주소 | Parent Email</strong></Form.Label>
-          <Form.Row>
+          <Row>
             <Col>
                 <Form.Control required placeholder="abc@gmail.com" type="email"
                     value={
@@ -44,8 +48,8 @@ const Home = ({year}) => {
                 Search
             </Button>
             </Col>
-          </Form.Row>
-        </Container>
+          </Row>
+      </Container>
     </Form>
     <Form onSubmit={handleRegister}>
     <Container style={{marginTop:'10px'}}>
@@ -62,7 +66,7 @@ const Home = ({year}) => {
     </Container>
     </Form>
     </Container>
-  )
+  );
 }
 
-export default Home;
+export default Reregister;
