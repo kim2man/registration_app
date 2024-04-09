@@ -1,5 +1,4 @@
 import React from 'react';
-import Constants from '../constants';
 import useSearch from '../hooks/useSearch';
 import Stein from '../components/Stein';
 import { Form, Container, Button, Col } from 'react-bootstrap';
@@ -54,7 +53,7 @@ const Home = ({year}) => {
       <div>Found {results.length} student(s): <br/>
         {results.map(element => 
         <b>{element.engName}<br/></b>)}
-        {results.length == 0 ? <p>Please register <a href="/register">here</a>.</p>: <Button variant="success" type="submit" style={{marginTop:'10px'}}>
+        {results.length === 0 ? <p>Please register <a href="/register">here</a>.</p>: <Button variant="success" type="submit" style={{marginTop:'10px'}}>
           Reregister all
         </Button> }
       </div>

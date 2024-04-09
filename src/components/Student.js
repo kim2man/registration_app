@@ -38,7 +38,7 @@ const Student = (props) => {
                 <Form.Label>영문 성명 | English Name *</Form.Label>
                 <Form.Control required placeholder="First Last Name" 
                     value={
-                        studentList.engName != '' ? studentList.engName : ''
+                        studentList.engName !== '' ? studentList.engName : ''
                     }
                     onChange={e => {
                        // e.preventDefault();
@@ -51,7 +51,7 @@ const Student = (props) => {
                 <Form.Label>Birthdate *</Form.Label>
                 <Form.Control required type="date" 
                     value={
-                        studentList.birthdate != '' ? studentList.birthdate : ''
+                        studentList.birthdate !== '' ? studentList.birthdate : ''
                     }
                     onChange={e => {
                         handleChange(e.target.value, 'birthdate');
@@ -61,7 +61,7 @@ const Student = (props) => {
                 <Form.Label>학년 | Grade *</Form.Label>
                 <Form.Control required as="select"
                     value={
-                        studentList.grade != '' ? studentList.grade : undefined
+                        studentList.grade !== '' ? studentList.grade : undefined
                     }
                     onChange={e => {
                         handleChange(e.target.value, 'grade');
@@ -93,7 +93,7 @@ const Student = (props) => {
                 label="F"
                 name="formgender"
                 checked={
-                    studentList.gender == 'F' ? "checked" : undefined
+                    studentList.gender === 'F' ? "checked" : undefined
                 }
                 onChange={e => {
                     handleChange('F', 'gender');
@@ -104,7 +104,7 @@ const Student = (props) => {
                 label="M"
                 name="formgender"
                 checked={
-                    studentList.gender == 'M' ? "checked" : undefined
+                    studentList.gender === 'M' ? "checked" : undefined
                 }
                 onChange={e => {
                     handleChange('M', 'gender');
@@ -118,7 +118,7 @@ const Student = (props) => {
                     label="전혀 못함 (Not at all)"
                     name="formRadioSkill"
                     checked={
-                        studentList.fluency == "전혀 못함 (Not at all)" ? "checked" : undefined
+                        studentList.fluency === "전혀 못함 (Not at all)" ? "checked" : undefined
                     }
                     onChange={e => {
                         handleChange("전혀 못함 (Not at all)", 'fluency');
@@ -130,7 +130,7 @@ const Student = (props) => {
                     label="조금 (A little)"
                     name="formRadioSkill" 
                     checked={
-                        studentList.fluency == "조금 (A little)" ? "checked" : undefined
+                        studentList.fluency === "조금 (A little)" ? "checked" : undefined
                     }
                     onChange={e => {
                         handleChange( "조금 (A little)", 'fluency');
@@ -142,10 +142,9 @@ const Student = (props) => {
                     label="잘함 (Well)"
                     name="formRadioSkill"
                     checked={
-                        studentList.fluency == "잘함 (Well)" ? "checked" : undefined
+                        studentList.fluency === "잘함 (Well)" ? "checked" : undefined
                     }
                     onChange={e => {
-                        let fluency = {current:{value: "잘함 (Well)"}}
                         handleChange("잘함 (Well)", 'fluency');
                     }}
                 />
@@ -154,7 +153,7 @@ const Student = (props) => {
             <Form.Label>종교 | Religion</Form.Label>
             <Form.Control 
                 value={
-                    studentList.religion != '' ? studentList.religion : ''
+                    studentList.religion !== '' ? studentList.religion : ''
                 }
                 onChange={e => {
                     handleChange(e.target.value, 'religion');
@@ -164,7 +163,7 @@ const Student = (props) => {
             <Form.Label>음식물 규정식 사항 | Dietary Notes</Form.Label>
             <Form.Control placeholder="Peanut allergy, etc" 
                 value={
-                    studentList.dietaryNotes != '' ? studentList.dietaryNotes : ''
+                    studentList.dietaryNotes !== '' ? studentList.dietaryNotes : ''
                 }
                 onChange={e => {
                     handleChange(e.target.value, 'dietaryNotes');
@@ -175,7 +174,7 @@ const Student = (props) => {
             <Form.Label>비고 | Other comments</Form.Label>
             <Form.Control 
                 value={
-                    studentList.comments != '' ? studentList.comments : ''
+                    studentList.comments !== '' ? studentList.comments : ''
                 }
                 onChange={e => {
                     handleChange(e.target.value, 'comments');
@@ -191,7 +190,7 @@ const Student = (props) => {
                 label="금 | Friday"
                 name="formRadioClass"
                 checked={
-                    studentList.classDay == "금" ? "checked" : undefined
+                    studentList.classDay === "금" ? "checked" : undefined
                 }
                 onChange={e => {
                     handleChange("금", 'classDay');
@@ -203,7 +202,7 @@ const Student = (props) => {
                 label="토 | Saturday"
                 name="formRadioClass"
                 checked={
-                    studentList.classDay == "토" ? "checked" : undefined
+                    studentList.classDay === "토" ? "checked" : undefined
                 }
                 onChange={e => {
                     handleChange("토", 'classDay');

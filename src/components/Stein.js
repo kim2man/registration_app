@@ -16,10 +16,10 @@ function writeRegistration(registration) {
         authentication: { username: Constants.username, password: Constants.auth }
     })
     .then(res => {
-        {window.location.href='/confirmation'};
+        window.location.href = '/confirmation';
     }).catch(err => {
         console.log(err);
-        {window.location.href='/about'};
+        window.location.href = '/about';
     });
 }
 

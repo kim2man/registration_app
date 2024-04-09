@@ -8,7 +8,6 @@ import Reregister from './pages/Reregister';
 import Confirmation from './pages/Confirmation';
 import Home from './pages/Home';
 import About from './pages/About';
-import Class from './pages/Class';
 import ClassPage from './pages/ClassPage';
 import Login from './pages/Login';
 
@@ -47,7 +46,6 @@ const App = () => {
         <Route path="confirmation" element={<Confirmation/>} />
         <Route path="/reregister" element={<Reregister year={year}/>} />
         <Route path="/about" element={<About/>} />
-        {/*<Route path="/class" element={<Class/>} />*/}
         <Route path="/class/*" element={<ClassPage/>} />
       
       </Routes>

@@ -6,7 +6,6 @@ import useSteps from '../hooks/useSteps';
 import useRegistration from '../hooks/useRegistration';
 
 import { Container } from 'react-bootstrap';
-import Constants from '../constants';
 import useStudents from '../hooks/useStudents';
 
 const Register = ({year}) => {
