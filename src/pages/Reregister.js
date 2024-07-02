@@ -20,7 +20,9 @@ const Reregister = ({year}) => {
     event.preventDefault();
     results.forEach(async element => {
       // console.log(element);
-      await Stein.writeRegistration(element);
+      await Stein.writeRegistration(element, () => {
+        window.location.href = '/confirmation';
+      });
     });
   };
   return (

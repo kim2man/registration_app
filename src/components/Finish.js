@@ -20,7 +20,10 @@ const Finish = ({steps, registrations, studentList}) => {
       event.stopPropagation();
     } else {
       setValidated(false);
-      await Stein.writeToDatabase(registration, students);
+      await Stein.writeToDatabase(registration, students, () => {
+        setStudents({});
+        backCurrentStep();
+      });
     }
   }; 
 
@@ -57,11 +60,6 @@ const Finish = ({steps, registrations, studentList}) => {
           <Button inline variant="success" 
             style={{float:'right'}}
             type="submit"
-          //   onClick={async e =>{
-          //    e.preventDefault()
-          //  //  e.target.value = "check";
-          //    await handleSubmit(e);
-          //   }}
             >
             Submit
           </Button>
