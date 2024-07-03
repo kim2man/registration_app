@@ -2,6 +2,8 @@ import firebase from "firebase/compat/app";
 import "firebase/compat/auth";
 import "firebase/compat/database";
 
+// Firebase data can be found in this link.
+//  https://console.firebase.google.com/project/schooldb-9a633/database/schooldb-9a633/data 
 var firebaseConfig = {
     apiKey: "AIzaSyAaoqIQyL3gQY75wvjJIOs0xfDNhTdArDM",
     authDomain: "schooldb-9a633.firebaseapp.com",
